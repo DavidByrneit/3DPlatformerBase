@@ -26,15 +26,11 @@ var _camera_input_direction := Vector2.ZERO
 @onready var _start_position := global_position
 
 @export var _skin: SophiaSkin
-@export var punch: Node3D
 @onready var _landing_sound: AudioStreamPlayer3D = %LandingSound
 @onready var _jump_sound: AudioStreamPlayer3D = %JumpSound
 @onready var _dust_particles: GPUParticles3D = %DustParticles
 
-enum Powers {  
-	GLOVES
-} 
-var powers: Powers
+
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
@@ -42,8 +38,7 @@ func _input(event: InputEvent) -> void:
 	elif event.is_action_pressed("left_click"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	elif event.is_action_pressed("action" + str(PlayerNo)):
-		if powers == Powers.GLOVES:
-			fireGloves()
+		pass
 
 func _unhandled_input(event: InputEvent) -> void:
 	var player_is_using_mouse := (
@@ -54,24 +49,42 @@ func _unhandled_input(event: InputEvent) -> void:
 		_camera_input_direction.y = event.relative.y * mouse_sensitivity
 
 func _physics_process(delta: float) -> void:
-	var raw_camera_input := Input.get_vector("camera_left" + str(PlayerNo), "camera_right" + str(PlayerNo), "camera_up" + str(PlayerNo), "camera_down" + str(PlayerNo), 0.4)
-	_camera_pivot.rotation.x += raw_camera_input.y * delta
-	_camera_pivot.rotation.y += -raw_camera_input.x * delta
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+		_camera_pivot.rotation.x += _camera_input_direction.y * delta
+		_camera_pivot.rotation.x = clamp(_camera_pivot.rotation.x, tilt_lower_limit, tilt_upper_limit)
+		_camera_pivot.rotation.y += _camera_input_direction.x * delta
 
-	raw_camera_input = Vector2.ZERO
+		_camera_input_direction = Vector2.ZERO
+	else:
+	# Gamepad/Keyboard Camera Input
+		var raw_camera_input := Input.get_vector(
+			"camera_left" + str(PlayerNo), "camera_right" + str(PlayerNo),
+			"camera_up" + str(PlayerNo), "camera_down" + str(PlayerNo),
+			0.4
+		)
+		_camera_pivot.rotation.x += raw_camera_input.y * delta
+		_camera_pivot.rotation.y += -raw_camera_input.x * delta
+		raw_camera_input=Vector2.ZERO
 
-	var raw_input := Input.get_vector("move_left" + str(PlayerNo), "move_right" + str(PlayerNo), "move_up" + str(PlayerNo), "move_down" + str(PlayerNo), 0.4)
+	# Movement input
+	var raw_input := Input.get_vector(
+		"move_left" + str(PlayerNo), "move_right" + str(PlayerNo),
+		"move_up" + str(PlayerNo), "move_down" + str(PlayerNo),
+		0.4
+	)
 	var forward := _camera_pivot.global_basis.z
 	var right := _camera_pivot.global_basis.x
 	var move_direction := forward * -raw_input.y + right * -raw_input.x
 	move_direction.y = 0.0
 	move_direction = move_direction.normalized()
 
+	# Smooth rotation towards movement direction
 	if move_direction.length() > 0.2:
 		_last_input_direction = move_direction.normalized()
 	var target_angle := Vector3.BACK.signed_angle_to(_last_input_direction, Vector3.UP)
 	_skin.global_rotation.y = lerp_angle(_skin.rotation.y, target_angle, rotation_speed * delta)
 
+	# Apply movement and physics
 	var y_velocity := velocity.y
 	velocity.y = 0.0
 	velocity = velocity.move_toward(move_direction * move_speed, acceleration * delta)
@@ -79,6 +92,7 @@ func _physics_process(delta: float) -> void:
 		velocity = Vector3.ZERO
 	velocity.y = y_velocity + _gravity * delta
 
+	# Jump and animation handling
 	var ground_speed := Vector2(velocity.x, velocity.z).length()
 	var is_just_jumping := Input.is_action_just_pressed("jump" + str(PlayerNo)) and is_on_floor()
 	if is_just_jumping:
@@ -100,10 +114,3 @@ func _physics_process(delta: float) -> void:
 
 	_was_on_floor_last_frame = is_on_floor()
 	move_and_slide()
-
-func fireGloves():
-	$SophiaSkin/sophia/Punch/AnimationPlayer.play("Punch")
-	$SophiaSkin/sophia/Punch2/AnimationPlayer.play("Punch")
-
-func setPowers(power: Powers):
-	powers = power

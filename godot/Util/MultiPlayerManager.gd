@@ -1,6 +1,7 @@
 extends Node
+
 func _ready() -> void:
-	setupMultiplayer(2)
+	setupMultiplayer(1)
 
 func setupMultiplayer(playerCount:int):
 	var actionList:Array[StringName]
