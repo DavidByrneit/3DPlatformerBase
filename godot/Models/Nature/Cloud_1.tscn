@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7kiqih81yo1l"]
+
+[ext_resource type="PackedScene" uid="uid://cctbwfgv4b1rj" path="res://Models/Nature/Raw/Cloud_1.blend" id="1_kbx31"]
+
+[node name="Cloud1" type="Node3D"]
+
+[node name="Cloud_12" parent="." instance=ExtResource("1_kbx31")]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://xqc2gwk003ts"]
+
+[ext_resource type="PackedScene" uid="uid://uckifdiytqpj" path="res://Models/Powerups/Raw/Gem_Pink.blend" id="1_hf447"]
+
+[node name="GemPink" type="Node3D"]
+
+[node name="Gem_Pink2" parent="." instance=ExtResource("1_hf447")]

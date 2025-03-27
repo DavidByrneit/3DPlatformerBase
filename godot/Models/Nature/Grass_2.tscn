@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://uegmyigtk2yk"]
+
+[ext_resource type="PackedScene" uid="uid://cy7f773w5bryi" path="res://Models/Nature/Raw/Grass_2.blend" id="1_0orje"]
+
+[node name="Grass2" type="Node3D"]
+
+[node name="Grass_22" parent="." instance=ExtResource("1_0orje")]

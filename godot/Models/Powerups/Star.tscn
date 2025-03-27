@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b46b2k02s2ghq"]
+
+[ext_resource type="PackedScene" uid="uid://bgiuc1kuqg2he" path="res://Models/Powerups/Raw/Star.blend" id="1_svaw8"]
+
+[node name="Star" type="Node3D"]
+
+[node name="Star2" parent="." instance=ExtResource("1_svaw8")]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b60w16d8b1g4i"]
+
+[ext_resource type="PackedScene" uid="uid://lnar4iv2yyqf" path="res://Models/Powerups/Raw/Heart.blend" id="1_2vswy"]
+
+[node name="Heart" type="Node3D"]
+
+[node name="Heart2" parent="." instance=ExtResource("1_2vswy")]

@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://rdq0pn6jobrp"]
+
+[ext_resource type="Script" uid="uid://bvjfom8tjjw1w" path="res://Enemies/Scripts/enemy.gd" id="1_e2mp2"]
+[ext_resource type="PackedScene" uid="uid://cjv7u6i7hcs1c" path="res://Enemies/Raw/Enemy.blend" id="1_uw4i7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_smhe6"]
+radius = 0.712472
+height = 1.47087
+
+[node name="Enemy" type="CharacterBody3D"]
+script = ExtResource("1_e2mp2")
+
+[node name="Enemy" parent="." instance=ExtResource("1_uw4i7")]
+
+[node name="Skeleton3D" parent="Enemy/MonsterArmature" index="0"]
+bones/1/rotation = Quaternion(0, -1.27337e-08, 0.0947738, 0.995499)
+bones/2/position = Vector3(-0.0491702, 0.534457, 8.27448e-09)
+bones/2/rotation = Quaternion(-3.46214e-09, 3.27563e-08, 0.227901, 0.973684)
+bones/3/rotation = Quaternion(2.22045e-16, 0, 0, 1)
+bones/4/rotation = Quaternion(-2.22045e-16, -1.33227e-15, 0, 1)
+bones/5/position = Vector3(-0.430698, 0.469323, 0.506212)
+bones/5/rotation = Quaternion(-2.22045e-16, -1.9984e-15, 0, 1)
+bones/6/position = Vector3(0.430698, 0.469323, 0.506212)
+bones/6/rotation = Quaternion(-2.22045e-16, -1.9984e-15, 0, 1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00765419, 0.697291, 0)
+shape = SubResource("CapsuleShape3D_smhe6")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[editable path="Enemy"]

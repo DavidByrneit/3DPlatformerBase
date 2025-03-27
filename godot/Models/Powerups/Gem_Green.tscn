@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfgv4m4bkff4m"]
+
+[ext_resource type="PackedScene" uid="uid://da1qwlq7dago3" path="res://Models/Powerups/Raw/Gem_Green.blend" id="1_iy5te"]
+
+[node name="GemGreen" type="Node3D"]
+
+[node name="Gem_Green2" parent="." instance=ExtResource("1_iy5te")]

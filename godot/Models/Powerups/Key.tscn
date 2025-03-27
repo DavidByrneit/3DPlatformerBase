@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cp5fdhg26ox1t"]
+
+[ext_resource type="PackedScene" uid="uid://c1vny2fttinow" path="res://Models/Powerups/Raw/Key.blend" id="1_kgasv"]
+
+[node name="Key" type="Node3D"]
+
+[node name="Key2" parent="." instance=ExtResource("1_kgasv")]

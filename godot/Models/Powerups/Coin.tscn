@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1i3g2txcvum2"]
+
+[ext_resource type="PackedScene" uid="uid://c0l65er55ulax" path="res://Models/Powerups/Raw/Coin.blend" id="1_yyn63"]
+
+[node name="Coin" type="Node3D"]
+
+[node name="Coin2" parent="." instance=ExtResource("1_yyn63")]

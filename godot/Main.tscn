@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ns3ycg54tfm2"]
+
+[ext_resource type="PackedScene" uid="uid://boy3oom8uh5ft" path="res://Models/Cubes/Grass.tscn" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://b1ot6gn6tms6h" path="res://Player/Player.tscn" id="2_uu6xs"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Grass" parent="." instance=ExtResource("1_glv2v")]
+transform = Transform3D(5.92, 0, 0, 0, 1, 0, 0, 0, 4.3, 0, 0, 0)
+
+[node name="Player3DTemplate" parent="." node_paths=PackedStringArray("_camera") instance=ExtResource("2_uu6xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.41468, 0)
+_camera = NodePath("Camera3D")
+
+[node name="Camera3D" type="Camera3D" parent="Player3DTemplate"]
+transform = Transform3D(-0.999995, 0, 0.00305429, 0.000787315, 0.966205, 0.257772, -0.00295107, 0.257774, -0.966201, 0, 2, -2)

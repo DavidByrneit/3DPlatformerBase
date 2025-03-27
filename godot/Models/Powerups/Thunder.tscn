@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://4f6oaup8pdo4"]
+
+[ext_resource type="PackedScene" uid="uid://3sdnbdnfvvbq" path="res://Models/Powerups/Raw/Thunder.blend" id="1_tsagm"]
+
+[node name="Thunder" type="Node3D"]
+
+[node name="Thunder2" parent="." instance=ExtResource("1_tsagm")]

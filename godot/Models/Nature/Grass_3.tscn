@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6tqw4aph05y4"]
+
+[ext_resource type="PackedScene" uid="uid://dlcjb8iloqyum" path="res://Models/Nature/Raw/Grass_3.blend" id="1_uda2j"]
+
+[node name="Grass3" type="Node3D"]
+
+[node name="Grass_32" parent="." instance=ExtResource("1_uda2j")]
