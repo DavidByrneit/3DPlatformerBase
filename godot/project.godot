@@ -24,6 +24,10 @@ folder_colors={
 "res://Level Pieces/": "yellow"
 }
 
+[global_group]
+
+Hazard=""
+
 [input]
 
 move_up={
