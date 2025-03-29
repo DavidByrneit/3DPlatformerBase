@@ -18,6 +18,12 @@ config/features=PackedStringArray("4.4", "GL Compatibility")
 
 MultiPlayerManager="*res://Util/MultiPlayerManager.gd"
 
+[file_customization]
+
+folder_colors={
+"res://Level Pieces/": "yellow"
+}
+
 [input]
 
 move_up={

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://by6kpc1mb7hr5"]
 
-[ext_resource type="PackedScene" uid="uid://ce2qn44b8nkr0" path="res://Models/Nature/Raw/Grass_1.blend" id="1_o3cu3"]
+[ext_resource type="PackedScene" uid="uid://ciuo6si7phslx" path="res://Models/Nature/Raw/Grass_1.fbx" id="1_o3cu3"]
 
 [node name="Grass1" type="Node3D"]
 

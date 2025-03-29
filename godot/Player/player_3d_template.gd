@@ -11,7 +11,6 @@ extends CharacterBody3D
 
 @export_group("Camera")
 @export var _camera_pivot: Node3D
-@export var _camera: Camera3D 
 @export_range(0.0, 1.0) var mouse_sensitivity := 0.25
 @export var tilt_upper_limit := PI / 3.0
 @export var tilt_lower_limit := -PI / 8.0
@@ -23,7 +22,6 @@ var _was_on_floor_last_frame := true
 var _camera_input_direction := Vector2.ZERO
 
 @onready var _last_input_direction := global_basis.z
-@onready var _start_position := global_position
 
 @export var _skin: SophiaSkin
 @onready var _landing_sound: AudioStreamPlayer3D = %LandingSound
