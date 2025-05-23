@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dka8q26hxmcsr"]
+
+[ext_resource type="Script" uid="uid://b2y73t3ejkfll" path="res://Scenes/moving_platform.gd" id="1_5olv3"]
+[ext_resource type="PackedScene" uid="uid://dh2w5j0wxfsad" path="res://Level Pieces/Bricks.tscn" id="1_k502f"]
+
+[sub_resource type="Curve3D" id="Curve3D_o1nts"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -1.29512, 0, 0, 0, 0, 0, 0, 0, 0, -0.85727, -0.142902, -0.156556, 0, 0, 0, 0, 0, 0, -0.258479, -0.338121, -0.370838, 0, 0, 0, 0, 0, 0, 0.408825, -0.547539, -0.616699, 0, 0, 0, 0, 0, 0, 0.813993, -0.664671, -0.774673, 0, 0, 0, 0, 0, 0, -0.547179, -0.673625, -1.50782),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0)
+}
+point_count = 6
+
+[node name="MovingPlatform" type="Path3D"]
+curve = SubResource("Curve3D_o1nts")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="."]
+transform = Transform3D(0.336681, 0.276608, -0.900074, 0, 0.95588, 0.293758, 0.941619, -0.0989029, 0.321827, -1.29512, 0, 0)
+script = ExtResource("1_5olv3")
+
+[node name="Bricks" parent="PathFollow3D" instance=ExtResource("1_k502f")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
