@@ -83,9 +83,8 @@ shape = SubResource("BoxShape3D_r0du0")
 [node name="Player3DTemplate" parent="." instance=ExtResource("2_uu6xs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.961611, 0.999619, -0.103076)
 
-<<<<<<< HEAD
 [editable path="Grass/StaticBody3D/CollisionShape3D/Cube_Grass_Single2"]
-=======
+
 [node name="MovingPlatform" parent="." instance=ExtResource("3_r0du0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.43493, 3.56661, 1.39702)
->>>>>>> 7126b08a24ea9b30cd2da6483812807847a7cf5b
+
