@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://rdq0pn6jobrp"]
+[gd_scene load_steps=5 format=3 uid="uid://rdq0pn6jobrp"]
 
 [ext_resource type="Script" uid="uid://bvjfom8tjjw1w" path="res://Scripts/enemy.gd" id="1_e2mp2"]
 [ext_resource type="PackedScene" uid="uid://d0tpp1c2oj1cn" path="res://Enemies/Raw/Enemy.fbx" id="1_uw4i7"]
@@ -6,6 +6,9 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_smhe6"]
 radius = 0.712472
 height = 1.47087
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4isyn"]
+size = Vector3(1.99585, 1.61401, 1.3822)
 
 [node name="Enemy" type="CharacterBody3D" groups=["Hazard"]]
 script = ExtResource("1_e2mp2")
@@ -27,5 +30,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00765419, 0.697291, 0)
 shape = SubResource("CapsuleShape3D_smhe6")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.012085, 0.80481, 0.0241089)
+shape = SubResource("BoxShape3D_4isyn")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 
 [editable path="Enemy"]

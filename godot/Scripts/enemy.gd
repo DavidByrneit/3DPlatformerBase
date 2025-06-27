@@ -6,7 +6,7 @@ var navAgent:NavigationAgent3D = $NavigationAgent3D
 
 ## Player to attack and chase
 @export var Player:Node3D
-
+@export var chase_distance:=5
 # Get a reference to the AnimationPlayer node
 @onready
 var animationPlayer:AnimationPlayer = $Enemy/AnimationPlayer
@@ -17,7 +17,7 @@ func _physics_process(_delta: float) -> void:
 	navAgent.target_position = Player.position
 	
 	# Check if the enemy is within 5 units of the player
-	if navAgent.distance_to_target() < 5:
+	if navAgent.distance_to_target() < chase_distance:
 		# If the animation is not already playing, play the "Walk" animation
 		if !animationPlayer.is_playing():
 			animationPlayer.play("Walk")
@@ -39,3 +39,8 @@ func _physics_process(_delta: float) -> void:
 		# If very close to the player, play the attack animation
 		if navAgent.distance_to_target() < 2:
 			animationPlayer.play("Bite_Front")
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Attack"):
+		queue_free()

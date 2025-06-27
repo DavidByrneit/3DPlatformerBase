@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv6oq1gw0ostf"]
+
+[ext_resource type="ArrayMesh" uid="uid://b32eplj22f434" path="res://Player/Attacks/Bread.obj" id="1_n5k3x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tl11u"]
+albedo_color = Color(0.501961, 0.380392, 0.254902, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n5k3x"]
+size = Vector3(0.448408, 0.354248, 0.955566)
+
+[node name="Bread" type="RigidBody3D" groups=["Attack"]]
+
+[node name="Bread" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, -0.17375, 0)
+mesh = ExtResource("1_n5k3x")
+surface_material_override/0 = SubResource("StandardMaterial3D_tl11u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0148193, 0.00109863, -0.0222168)
+shape = SubResource("BoxShape3D_n5k3x")
+debug_color = Color(8.47101e-06, 0.722264, 0.843257, 1)
