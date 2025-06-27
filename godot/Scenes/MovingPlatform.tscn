@@ -15,7 +15,7 @@ point_count = 6
 curve = SubResource("Curve3D_o1nts")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="."]
-transform = Transform3D(0.336681, 0.276608, -0.900074, 0, 0.95588, 0.293758, 0.941619, -0.0989029, 0.321827, -1.29512, 0, 0)
+transform = Transform3D(0.336682, 0.276609, -0.900074, -1.49012e-08, 0.95588, 0.293759, 0.941619, -0.0989033, 0.321827, -1.29512, 0, 0)
 script = ExtResource("1_5olv3")
 
 [node name="Bricks" parent="PathFollow3D" instance=ExtResource("1_k502f")]

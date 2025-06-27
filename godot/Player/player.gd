@@ -10,7 +10,7 @@ extends CharacterBody3D
 @export var jump_impulse := 12.0
 @export var rotation_speed := 12.0
 @export var stopping_speed := 1.0
-
+@export var max_jumps:=2
 
 # Camera Settings
 @export_group("Camera")
@@ -34,6 +34,7 @@ const GRAVITY := -30.0
 var _camera_input_direction := Vector2.ZERO
 var _was_on_floor_last_frame := true
 var _last_input_direction := Vector3.FORWARD
+var _current_jump=max_jumps
 
 
 func _input(event: InputEvent) -> void:
@@ -115,12 +116,15 @@ func update_velocity(move_direction: Vector3, delta: float) -> void:
 
 func handle_jumping() -> void:
 	var jump_action := "jump" + str(PlayerNo)
-	if Input.is_action_just_pressed(jump_action) and is_on_floor():
+	if Input.is_action_just_pressed(jump_action) and _current_jump>0:
 		velocity.y = jump_impulse
+		_current_jump-=1
 		_skin.jump()
 		_jump_sound.play()
 	elif not is_on_floor() and velocity.y < 0:
 		_skin.fall()
+	elif is_on_floor():
+		_current_jump=max_jumps
 
 func handle_animation() -> void:
 	var ground_speed := Vector2(velocity.x, velocity.z).length()
