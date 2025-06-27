@@ -19,7 +19,7 @@ size = Vector3(835.108, 1, 876.676)
 [node name="Main" type="Node2D"]
 
 [node name="Grass" parent="." instance=ExtResource("1_glv2v")]
-transform = Transform3D(5.92, 0, 0, 0, 1, 0, 0, 0, 4.3, 0, 0, 0)
+transform = Transform3D(14.1716, 0, 0, 0, 1, 0, 0, 0, 16.694, 0, 0, 0)
 
 [node name="Lighting" type="Node3D" parent="."]
 
@@ -47,5 +47,5 @@ shape = SubResource("BoxShape3D_r0du0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.961611, 0.999619, -0.103076)
 
 [node name="Enemy" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("3_r0du0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.330212, 1.02177, -2.67344)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05863, 1.02177, 8.66263)
 Player = NodePath("../Player3DTemplate")

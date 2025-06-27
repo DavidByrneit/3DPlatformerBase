@@ -16,14 +16,20 @@ script = ExtResource("1_e2mp2")
 [node name="Enemy" parent="." instance=ExtResource("1_uw4i7")]
 
 [node name="Skeleton3D" parent="Enemy/MonsterArmature" index="0"]
-bones/1/position = Vector3(-7.80307e-20, 0.000898253, 0.00500828)
+bones/0/position = Vector3(-2.57686e-10, 0.000372668, -2.57686e-10)
+bones/0/rotation = Quaternion(0.707107, -1.77636e-15, -3.64422e-08, 0.707107)
+bones/1/position = Vector3(-4.44089e-18, 0.000898253, 0.00500828)
+bones/1/rotation = Quaternion(5.29396e-23, 5.29396e-23, 5.29396e-23, 1)
+bones/3/position = Vector3(0, 0, 0.00472872)
+bones/3/rotation = Quaternion(0.643991, -1.34384e-17, 1.34384e-17, 0.765033)
 bones/4/position = Vector3(0, 0.00516586, 0)
+bones/4/rotation = Quaternion(0, 0, 1.29247e-26, 1)
 bones/5/position = Vector3(0, 0.00390075, 0)
-bones/5/rotation = Quaternion(0, 0, 0, 1)
+bones/5/rotation = Quaternion(0, 0, 1.29247e-26, 1)
 bones/7/position = Vector3(-0.00430698, 0.00469323, 0.00506212)
-bones/7/rotation = Quaternion(0, 0, 0, 1)
+bones/7/rotation = Quaternion(0.0947325, -0.0116385, -0.0738004, 0.992695)
 bones/9/position = Vector3(0.00430698, 0.00469323, 0.00506212)
-bones/9/rotation = Quaternion(0, 0, 0, 1)
+bones/9/rotation = Quaternion(0.0947325, 0.0116385, 0.0738004, 0.992695)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00765419, 0.697291, 0)
