@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c6rd6b3nq55hx"
-path="res://.godot/imported/Cube_Spikes.fbx-58d89090c572d30c0be844838803de39.scn"
+path="res://.godot/imported/Cube_Spikes.fbx-b70e5228e084535483b0a2b21371889e.scn"
 
 [deps]
 
-source_file="res://Level Pieces/Raw/Cube_Spikes.fbx"
-dest_files=["res://.godot/imported/Cube_Spikes.fbx-58d89090c572d30c0be844838803de39.scn"]
+source_file="res://Models/Blocks/Cube_Spikes.fbx"
+dest_files=["res://.godot/imported/Cube_Spikes.fbx-b70e5228e084535483b0a2b21371889e.scn"]
 
 [params]
 

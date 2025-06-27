@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bu0p4k01dekee"
-path="res://.godot/imported/Cube_Grass_Single.fbx-9a68d959616ae3a4ebcd39020b26ca77.scn"
+uid="uid://byklk2620ss7m"
+path="res://.godot/imported/Cube_Dirt_Single.fbx-3c7ec780a16209aa7ebfde0c923e3311.scn"
 
 [deps]
 
-source_file="res://Level Pieces/Raw/Cube_Grass_Single.fbx"
-dest_files=["res://.godot/imported/Cube_Grass_Single.fbx-9a68d959616ae3a4ebcd39020b26ca77.scn"]
+source_file="res://Models/Blocks/Cube_Dirt_Single.fbx"
+dest_files=["res://.godot/imported/Cube_Dirt_Single.fbx-3c7ec780a16209aa7ebfde0c923e3311.scn"]
 
 [params]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dpfeqyrdqmgyh"
-path="res://.godot/imported/Cube_Question.fbx-38fa4c4e19c59c3e02702d508c84e876.scn"
+uid="uid://bdkt252oovnnj"
+path="res://.godot/imported/Cube_Crate.fbx-21821cb16a9719bff6bdb15c1dd7ef09.scn"
 
 [deps]
 
-source_file="res://Level Pieces/Raw/Cube_Question.fbx"
-dest_files=["res://.godot/imported/Cube_Question.fbx-38fa4c4e19c59c3e02702d508c84e876.scn"]
+source_file="res://Models/Blocks/Cube_Crate.fbx"
+dest_files=["res://.godot/imported/Cube_Crate.fbx-21821cb16a9719bff6bdb15c1dd7ef09.scn"]
 
 [params]
 

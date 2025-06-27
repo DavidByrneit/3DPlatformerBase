@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bfyqr0q33wcmi"
-path="res://.godot/imported/Cube_Exclamation.fbx-74c6ed1c38aac969366a481704218e01.scn"
+uid="uid://dpfeqyrdqmgyh"
+path="res://.godot/imported/Cube_Question.fbx-797213a5b109b7ae219b77fd23332a30.scn"
 
 [deps]
 
-source_file="res://Level Pieces/Raw/Cube_Exclamation.fbx"
-dest_files=["res://.godot/imported/Cube_Exclamation.fbx-74c6ed1c38aac969366a481704218e01.scn"]
+source_file="res://Models/Blocks/Cube_Question.fbx"
+dest_files=["res://.godot/imported/Cube_Question.fbx-797213a5b109b7ae219b77fd23332a30.scn"]
 
 [params]
 

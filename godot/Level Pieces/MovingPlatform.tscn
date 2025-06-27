@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dka8q26hxmcsr"]
 
-[ext_resource type="Script" uid="uid://b2y73t3ejkfll" path="res://Scenes/moving_platform.gd" id="1_5olv3"]
+[ext_resource type="Script" uid="uid://b2y73t3ejkfll" path="res://Scripts/moving_platform.gd" id="1_5olv3"]
 [ext_resource type="PackedScene" uid="uid://dh2w5j0wxfsad" path="res://Level Pieces/Bricks.tscn" id="1_k502f"]
 
 [sub_resource type="Curve3D" id="Curve3D_o1nts"]
